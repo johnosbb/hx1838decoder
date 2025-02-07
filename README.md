@@ -11,6 +11,11 @@ The NEC IR transmission protocol uses pulse distance encoding of the message bit
 
 When transmitting or receiving remote control codes using the NEC IR transmission protocol, the WB_IRRC performs optimally when the carrier frequency (used for modulation/demodulation) is set to 38.222kHz.
 
+
+![image](https://github.com/user-attachments/assets/2194b772-ae63-45f3-abe9-25d183b078f0)
+
+_Logical 0 and Logical 1 Sequence Captured on an Oscilloscope_
+
 ### Key Press
 
 When a key is pressed on the remote controller, the message transmitted consists of the following, in order:
