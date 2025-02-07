@@ -25,6 +25,7 @@ When a key is pressed on the remote controller, the message transmitted consists
 
 The four bytes of data bits are each sent least significant bit first.  
 
+![image](https://github.com/user-attachments/assets/25b6e279-3dec-4f91-be2a-9b2d16449fdf)
 
 ### Repeat Codes
 
