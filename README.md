@@ -5,10 +5,13 @@ This library provides an Arduino-compatible NEC IR remote decoder for HX1838 and
 ## NEC Protocol
 
 The NEC IR transmission protocol uses pulse distance encoding of the message bits. Each pulse burst (mark – RC transmitter ON) is 562.5µs in length, at a carrier frequency of 38kHz (26.3µs). Logical bits are transmitted as follows: 
+
 - Logical '0' – a 562.5µs pulse burst followed by a 562.5µs space, with a total transmit time of 1.125ms
 - Logical '1' – a 562.5µs pulse burst followed by a 1.6875ms space, with a total transmit time of 2.25ms
 
 When transmitting or receiving remote control codes using the NEC IR transmission protocol, the WB_IRRC performs optimally when the carrier frequency (used for modulation/demodulation) is set to 38.222kHz.
+
+### Key Press
 
 When a key is pressed on the remote controller, the message transmitted consists of the following, in order:
 
@@ -22,8 +25,18 @@ When a key is pressed on the remote controller, the message transmitted consists
 
 The four bytes of data bits are each sent least significant bit first.  
 
-## How It Works
---------
+
+### Repeat Codes
+
+If the key on the remote controller is kept depressed, a repeat code will be issued, typically around 40ms after the pulse burst that signified the end of the message. A repeat code will continue to be sent out at 108ms intervals, until the key is finally released. The repeat code consists of the following, in order:
+
+- a 9ms leading pulse burst
+- a 2.25ms space
+- a 562.5µs pulse burst to mark the end of the space (and hence end of the transmitted repeat code).
+
+## How the Library Works
+
+
 ### Interrupt-Driven Signal Capture
 
 An interrupt is attached to the specified IR receiver pin. Each pulse transition (HIGH/LOW) is recorded in pulseTimes[] along with its duration (in microseconds).
