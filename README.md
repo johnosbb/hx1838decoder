@@ -70,7 +70,7 @@ Use available() to check if a valid signal was received. Use getDecodedData() to
 ```cpp
 #include "HX1838Decoder.h"
 
-IRDecoder irDecoder(4);  // Create an instance with IR receiver pin 4
+IRDecoder irDecoder(4);  // IR Receiver on pin 4
 
 void setup() {
     Serial.begin(115200);
@@ -80,7 +80,13 @@ void setup() {
 void loop() {
     if (irDecoder.available()) {
         Serial.print("Decoded NEC Data: 0x");
-        Serial.println(irDecoder.getDecodedData(), HEX);
+        Serial.print(irDecoder.getDecodedData(), HEX);
+        
+        if (irDecoder.isRepeatSignal()) {
+            Serial.println(" (REPEATED)");
+        } else {
+            Serial.println(" (NEW PRESS)");
+        }
     }
 }
 ```
