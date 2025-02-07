@@ -27,6 +27,8 @@ The four bytes of data bits are each sent least significant bit first.
 
 ![image](https://github.com/user-attachments/assets/25b6e279-3dec-4f91-be2a-9b2d16449fdf)
 
+_Key Press Captured on an Oscilloscope_
+
 ### Repeat Codes
 
 If the key on the remote controller is kept depressed, a repeat code will be issued, typically around 40ms after the pulse burst that signified the end of the message. A repeat code will continue to be sent out at 108ms intervals, until the key is finally released. The repeat code consists of the following, in order:
@@ -34,6 +36,10 @@ If the key on the remote controller is kept depressed, a repeat code will be iss
 - a 9ms leading pulse burst
 - a 2.25ms space
 - a 562.5µs pulse burst to mark the end of the space (and hence end of the transmitted repeat code).
+
+![image](https://github.com/user-attachments/assets/21b733ec-a690-4374-aaa3-f16c91d5ce22)
+
+_Key Repeat Sequence on an Oscilloscope_
 
 ## How the Library Works
 
