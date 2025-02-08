@@ -1,9 +1,23 @@
-# Overview
+## Introduction
+
+![image](https://github.com/user-attachments/assets/58449a8a-e302-431d-8ae5-4f6692c08533)
+
+I was recently working on an ESP32-based project and wanted to integrate a simple, cheap IR remote control into it. Initially, I assumed this would be straightforward—after all, there are plenty of IR remote libraries available for Arduino.
+
+However, after testing multiple popular libraries, I ran into reliability issues on ESP32 and ESP8266 devices. Some libraries had timing inconsistencies, while others didn’t handle interrupts well on these architectures. Others simply weren’t designed with ESP-specific constraints in mind.
+
+Why HX1838Decoder?
+Rather than hacking existing libraries, I decided to build my own lightweight NEC-compatible IR decoder, focusing on:
+
+-ESP32 & ESP8266 Compatibility – Designed with their architecture in mind.
+-Interrupt-Based Decoding – Ensures accurate and efficient signal capture.
+-Minimal Overhead – No unnecessary dependencies or features.
+-Support for Repeat Signals – Properly detects when a key is held down.
+
+## Overview
 
 This library provides an Arduino-compatible NEC IR remote decoder for HX1838 and similar IR receivers. It captures and processes infrared signals, extracts 32-bit NEC codes, and provides a simple interface for retrieval.
 
-
-![image](https://github.com/user-attachments/assets/58449a8a-e302-431d-8ae5-4f6692c08533)
 
 
 ## NEC Protocol
