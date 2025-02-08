@@ -3,7 +3,8 @@
 This library provides an Arduino-compatible NEC IR remote decoder for HX1838 and similar IR receivers. It captures and processes infrared signals, extracts 32-bit NEC codes, and provides a simple interface for retrieval.
 
 
-![image](https://github.com/user-attachments/assets/47ee7dfc-c10f-4be3-84d9-34c0f8e6d8a9)
+![image](https://github.com/user-attachments/assets/58449a8a-e302-431d-8ae5-4f6692c08533)
+
 
 ## NEC Protocol
 
