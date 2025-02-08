@@ -9,10 +9,17 @@ However, after testing multiple popular libraries, I ran into reliability issues
 Why HX1838Decoder?
 Rather than hacking existing libraries, I decided to build my own lightweight NEC-compatible IR decoder, focusing on:
 
--ESP32 & ESP8266 Compatibility – Designed with their architecture in mind.
--Interrupt-Based Decoding – Ensures accurate and efficient signal capture.
--Minimal Overhead – No unnecessary dependencies or features.
--Support for Repeat Signals – Properly detects when a key is held down.
+- ESP32 & ESP8266 Compatibility – Designed with their architecture in mind.
+- Interrupt-Based Decoding – Ensures accurate and efficient signal capture.
+- Minimal Overhead – No unnecessary dependencies or features.
+- Support for Repeat Signals – Properly detects when a key is held down.
+
+## Getting Started
+To integrate HX1838Decoder into your project:
+
+- Install the library via the Arduino Library Manager or GitHub.
+- Connect an IR receiver module (HX1838 or similar) to an interrupt-capable pin.
+- Use the API to capture and decode IR signals.
 
 ## Overview
 
