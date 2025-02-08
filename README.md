@@ -2,6 +2,9 @@
 
 This library provides an Arduino-compatible NEC IR remote decoder for HX1838 and similar IR receivers. It captures and processes infrared signals, extracts 32-bit NEC codes, and provides a simple interface for retrieval.
 
+
+![image](https://github.com/user-attachments/assets/47ee7dfc-c10f-4be3-84d9-34c0f8e6d8a9)
+
 ## NEC Protocol
 
 The NEC IR transmission protocol uses pulse distance encoding of the message bits. Each pulse burst (mark – RC transmitter ON) is 562.5µs in length, at a carrier frequency of 38kHz (26.3µs). Logical bits are transmitted as follows: 
