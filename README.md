@@ -107,3 +107,6 @@ __Important__: The IR receiver must be connected to an interrupt-capable pin. Ch
 - Arduino Uno/Nano: Pins 2, 3
 - ESP8266: Pins 0, 2, 4, 5, 12, 13, 14, 15
 - ESP32: Almost all GPIO pins (except 6-11)
+
+- ![image](https://github.com/user-attachments/assets/0f10852e-3eb2-495b-8deb-aa0d594b3cb9)
+
